@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | Interactive card details form</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- StyleSheet -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <section class="live-card card-front">
+                <img
+                    id="card-logo"
+                    class="gi-card-1"
+                    src="images/card-logo.svg"
+                    alt="card logo"
+                />
+                <div id="live-card-no" class="gi-card-2">
+                    0000 0000 0000 0000
+                </div>
+                <div id="live-name" class="gi-card-3 uppercase">
+                    Jane Appleseed
+                </div>
+                <div id="live-expiry" class="gi-card-4">00/00</div>
+            </section>
+
+            <section class="live-card card-back">
+                <div id="live-cvv">000</div>
+            </section>
+        </header>
+
+        <main class="main">
+            <form action="#" class="form">
+                <div id="name-input-field" class="form-field gi-f-1">
+                    <h3 class="field-name">Cardholder Name</h3>
+                    <input
+                        id="name-input"
+                        type="text"
+                        placeholder="e.g Jane Appleseed"
+                        class="field-input"
+                    />
+                    <div class="error-msg required">Can't be blank</div>
+                </div>
+
+                <div id="card-input-field" class="form-field gi-f-2">
+                    <h3 class="field-name">Card Number</h3>
+                    <input
+                        id="card-input"
+                        type="text"
+                        maxlength="16"
+                        placeholder="e.g. 1234 5678 9123 0000"
+                        class="field-input"
+                    />
+                    <div class="error-msg required">Can't be blank</div>
+                    <div class="error-msg num-only">
+                        Wrong format, numbers only
+                    </div>
+                </div>
+                <div id="expiry-input-field" class="form-field gi-f-3">
+                    <h3 class="field-name">Exp. Date (MM/YY)</h3>
+                    <div class="expiry-input-container">
+                        <input
+                            id="month-input"
+                            type="text"
+                            maxlength="2"
+                            placeholder="MM"
+                            class="field-input"
+                        />
+                        <input
+                            id="year-input"
+                            type="text"
+                            maxlength="2"
+                            placeholder="YY"
+                            class="field-input"
+                        />
+                        <div class="error-msg required">Can't be blank</div>
+                    </div>
+                </div>
+
+                <div id="cvv-input-field" class="form-field gi-f-4">
+                    <h3 class="field-name">CVC</h3>
+                    <input
+                        id="cvv-input"
+                        type="text"
+                        maxlength="3"
+                        placeholder="e.g. 123"
+                        class="field-input"
+                    />
+                    <div class="error-msg required">Can't be blank</div>
+                    <div class="error-msg num-only">
+                        Wrong format, numbers only
+                    </div>
+                </div>
+
+                <button class="btn submit-btn disabled gi-f-5" type="submit">
+                    Confirm
+                </button>
+            </form>
+            <section class="page-accept hidden">
+                <svg
+                    class="icon-complete"
+                    width="80"
+                    height="80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <circle cx="40" cy="40" r="40" fill="url(#a)" />
+                    <path
+                        d="M28 39.92 36.08 48l16-16"
+                        stroke="#fff"
+                        stroke-width="3"
+                    />
+                    <defs>
+                        <linearGradient
+                            id="a"
+                            x1="-23.014"
+                            y1="11.507"
+                            x2="0"
+                            y2="91.507"
+                            gradientUnits="userSpaceOnUse"
+                        >
+                            <stop stop-color="#6348FE" />
+                            <stop offset="1" stop-color="#610595" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <h1>Thank You!</h1>
+                <p>We've added your card details</p>
+                <button class="btn">Continue</button>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+        <script src="update-card.js"></script>
+        <script src="validate.js"></script>
+    </body>
+</html>
