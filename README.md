@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/PriyanshuSahani/frontendmentor-carddetails-form)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Website](https://priyanshusahani.github.io/frontendmentor-carddetails-form/)
 
 ## My process
 
